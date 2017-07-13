@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="25eab13b3711450bb7fcd262a3f0e64a" Name="Diagram1">
+        <EntityTypeShape EntityType="MaerskLineModel.Book" Width="1.5" PointX="4.875" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaerskLineModel.Cargo" Width="1.5" PointX="3" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaerskLineModel.Customer" Width="1.5" PointX="1.125" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaerskLineModel.Ship" Width="1.5" PointX="1.125" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MaerskLineModel.Warehouse" Width="1.75" PointX="5" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="MaerskLineModel.FK_Book_Cargos" ManuallyRouted="false" />
+        <AssociationConnector Association="MaerskLineModel.FK_Book_Ships" ManuallyRouted="false" />
+        <AssociationConnector Association="MaerskLineModel.FK_Book_Warehouses" ManuallyRouted="false" />
+        <AssociationConnector Association="MaerskLineModel.FK_Cargos_Customers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

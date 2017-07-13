@@ -1,0 +1,80 @@
+﻿@model MaerskLineDDAC.Models.Cargo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Cargo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CargoName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargoName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CargoLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargoLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CargoWidth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargoWidth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CargoHeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargoHeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CargoWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargoWeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CargoStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargoStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer1.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer1.CustomerName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

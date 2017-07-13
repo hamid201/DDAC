@@ -1,0 +1,65 @@
+﻿@model MaerskLineDDAC.Models.Warehouse
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Warehouse</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.WarehouseId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WarehouseName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WarehouseName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WarehouseName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WarehouseAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WarehouseAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WarehouseAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyrMed0Iy-n7IbLzA0WnfH1KlTzI_otN8&libraries=places"></script>
+
+<script type="text/javascript">
+
+        google.maps.event.addDomListener(window, 'load', function () {
+
+
+            var input = document.getElementById('WarehouseAddress');
+            var places = new google.maps.places.SearchBox(input);
+
+
+        });
+</script>
+
+
+}
